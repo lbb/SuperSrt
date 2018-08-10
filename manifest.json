@@ -1,0 +1,38 @@
+{
+  "name": "Super Srt",
+  "version": "1.12",
+  "minimum_chrome_version": "41",
+  "description": "Have shorter URLs",
+  "page_action": {
+    "default_popup": "options.html",
+    "default_title": "SuperShort Options",
+    "default_icon": {
+      "16": "images/favicon-16.png",
+      "32": "images/favicon-32.png",
+      "48": "images/favicon-48.png",
+      "256": "images/favicon-256.png"
+    }
+  },
+  "icons": {
+    "16": "images/favicon-16.png",
+    "32": "images/favicon-32.png",
+    "48": "images/favicon-48.png",
+    "256": "images/favicon-256.png"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": [
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "declarativeContent",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "manifest_version": 2
+}

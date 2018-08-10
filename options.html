@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./libs/material.min.css">
+    <script src="./libs/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        input {
+            bottom: 0;
+            width: 100%;
+            height: 20px;
+            background-color: transparent;
+            color: #7f8c8d;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid #bdc3c7;
+        }
+    </style>
+</head>
+
+<body style="display: flex; align-items: center; justify-content: center;">
+<div style="display: inline-block;">
+    <div>
+        <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+            <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric">Prefix</th>
+                <th class="mdl-data-table__cell--non-numeric">Plain Route</th>
+                <th class="mdl-data-table__cell--non-numeric">Match Regex</th>
+                <th class="mdl-data-table__cell--non-numeric">Match Route</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody id="table"> </tbody>
+        </table>
+    </div>
+    <div class="row" style="display: flex; justify-content: space-around; margin: 30px; align-items: center;">
+        <button class="mdl-button mdl-button--colored mdl-color--red-50 mdl-button--accent" id="cancel">
+            Cancel
+        </button>
+
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" id="new">
+            <i class="material-icons">add</i>
+        </button>
+
+        <button class="mdl-button mdl-button--raised mdl-button--primary" id="save">
+            Save
+        </button>
+    </div>
+</div>
+
+
+<script src="options.js"></script>
+</body>
+</html>
