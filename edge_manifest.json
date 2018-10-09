@@ -1,0 +1,38 @@
+{
+    "author": "Luk Burchard",
+    "background": {
+        "page": "background.html",
+        "persistent": true
+    },
+    "description": "Have shorter URLs",
+    "icons": {
+        "16": "images/favicon-16.png",
+        "32": "images/favicon-32.png",
+        "48": "images/favicon-48.png",
+        "256": "images/favicon-256.png"
+    },
+    "manifest_version": 2,
+    "name": "Super Srt",
+    "options_page": "options.html",
+    "page_action": {
+        "default_popup": "options.html",
+        "default_title": "SuperShort Options",
+        "default_icon": {
+            "16": "images/favicon-16.png",
+            "32": "images/favicon-32.png",
+            "48": "images/favicon-48.png",
+            "256": "images/favicon-256.png"
+        }
+    },
+    "permissions": [
+        "storage",
+        "webRequest",
+        "webRequestBlocking",
+        "<all_urls>"
+    ],
+    "version": "1.12",
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}
