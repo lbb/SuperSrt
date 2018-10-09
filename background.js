@@ -56,22 +56,13 @@ chrome.webRequest.onBeforeRequest.addListener(
 
 
 chrome.runtime.onInstalled.addListener(function () {
-    chrome.storage.sync.get('rules', ({rules: loadedRules}) => {
-        if (loadedRules == null) chrome.storage.sync.set({rules: rules});
-    });
-    chrome.declarativeContent.onPageChanged.removeRules(undefined, function () {
-        chrome.declarativeContent.onPageChanged.addRules([{
-            conditions: [new chrome.declarativeContent.PageStateMatcher({
-                pageUrl: {urlMatches: '.*'},
-            })
-            ],
-            actions: [new chrome.declarativeContent.ShowPageAction()]
-        }]);
+    chrome.storage.local.get('rules', ({rules: loadedRules}) => {
+        if (loadedRules == null) chrome.storage.local.set({rules: rules});
     });
 });
 
 
-chrome.storage.sync.get('rules', ({rules: loadedRules}) => {
+chrome.storage.local.get('rules', ({rules: loadedRules}) => {
     console.log("loaded rules");
     console.log(loadedRules);
     syncedRule = loadedRules;

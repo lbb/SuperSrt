@@ -1,7 +1,6 @@
 {
   "name": "Super Srt",
   "version": "1.12",
-  "minimum_chrome_version": "41",
   "description": "Have shorter URLs",
   "page_action": {
     "default_popup": "options.html",
@@ -26,7 +25,6 @@
     "storage",
     "webRequest",
     "webRequestBlocking",
-    "declarativeContent",
     "<all_urls>"
   ],
   "background": {

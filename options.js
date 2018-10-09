@@ -59,7 +59,7 @@ const newButton = document.getElementById("new");
 const saveButton = document.getElementById("save");
 const cancelButton = document.getElementById("cancel");
 
-chrome.storage.sync.get('rules', ({rules: rules}) => {
+chrome.storage.local.get('rules', ({rules: rules}) => {
     if (!Object.keys(rules).length) {
         rules = {"": {}};
     }
@@ -86,7 +86,7 @@ chrome.storage.sync.get('rules', ({rules: rules}) => {
             if (keys.indexOf("") === -1)
                 Object.assign(rules, value);
         });
-        chrome.storage.sync.set({rules: rules}, () => chrome.runtime.reload());
+        chrome.storage.local.set({rules: rules}, () => chrome.runtime.reload());
     });
 
     cancelButton.addEventListener("click", () => {
